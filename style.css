@@ -1,0 +1,228 @@
+body {
+    background-color: #2f393d;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+a:hover {
+    color: #00bf63;
+}
+
+.nav-bar a:hover {
+    color: #00bf63;
+    text-decoration: underline;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 1rem;
+}
+
+.logo {
+    margin-right: auto;;
+}
+
+.nav-bar ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+} 
+
+.nav-bar li {
+    margin-left: 20px;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+.nav-bar a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex: 1;
+    padding: 2rem;
+    margin-top: 2%;
+}
+
+.main-content {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    color: white;
+    padding: 1rem;
+    margin-top: 150px;
+    margin-left: 100px;
+}
+
+.main-content h1 {
+    font-size: 40px;
+    margin: 0;
+    text-align: left;
+}
+.main-content h3 {
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+}
+.main-content p {
+    text-align: left;
+}
+
+h3 {
+    color: #39FF14;
+}
+
+.main-content p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.main-buttons {
+    /* cursor: pointer; */
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+}
+
+.btn1 {
+    background-color: #39FF14;
+    border: none;
+    font-size: larger;
+    border-radius: 12px;
+    margin-right: 45px;
+    padding: 10px 20px;
+}
+.btn1:hover {
+    background-color: #2f393d;
+    border: 2px solid #39FF14;;
+}
+
+.btn2 {
+   display: flex ;
+   justify-content: center;
+   align-items: center;
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   background-color: black;
+   border: 2px solid #2ea44f;
+   padding: 0;
+   overflow: hidden;
+   text-decoration: none;
+   transition: all 0.2s ease;
+   background-image: url('images/png-clipart-computer-icons-github-symbol-github-white-face-556517588.png');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.btn2:hover {
+    border-color: #3fb45a; /* Slightly lighter green on hover */
+    box-shadow: 0 0 8px rgba(46, 164, 79, 0.5); /* Green glow */
+    transform: scale(1.05);
+  }
+
+.btn2:active {
+    transform: brightness(0.9);
+}
+
+.btn3 {
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: black;
+    border: 2px solid #2ea44f;
+    padding-left: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    background-image: url('images/hd-green-linkedin-in-icon-text-symbol-sign-png-31623974088hhsnjo9cix-3261247365.png');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 15px;
+}
+.btn3:hover {
+    border-color: #3fb45a; /* Slightly lighter green on hover */
+    box-shadow: 0 0 8px rgba(46, 164, 79, 0.5); /* Green glow */
+    transform: scale(1.05);
+  }
+
+.image-container {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 150px;
+    margin-top: 200px;
+}  
+.orbit-wrapper {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;  
+    display: block; 
+}
+
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(57, 255, 20, 0.8);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(2px);
+    box-shadow: 
+    0 0 10px rgba(57, 255, 20, 0.5),
+    0 0 40px rgba(57, 255, 20, 0.3),
+    0 0 90px rgba(57, 255, 20, 0.2);
+}
+.orbit1 {
+    animation: rotate1 5s linear infinite;
+    transform-origin: 50% 50%; /* radius of circle */
+}
+
+.orbit2 {
+    animation: rotate2 5s linear infinite;
+    transform-origin: 50% 50%;
+    background-color: #00bf63;
+    animation-delay: 2.5s; 
+}
+
+@keyframes rotate1 {
+    0% { transform: rotate(0deg) translateX(200px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+}
+  
+@keyframes rotate2 {
+    0% { transform: rotate(0deg) translateX(200px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+}
