@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Resume | Tien Do</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="resume.css">
+        <script src="resume.js"></script>
+    </head>
+
+    <body>
+        <section class="header">
+            <a class="logo" href="#"> Software Engineer</a>
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="resume-section">
+            <div class="resume-layout1">
+                <div class="resume-heroes">
+                    <h2>Why Hire Me?</h2>
+                    <p> I have the ability to create visually appealing and fully functional websites using HTML and CSS, with dynamic interactivity powered by JavaScript and React. 
+                        On the backend, I work confidently with databases such as SQL and PostgreSQL to ensure robust data management. 
+                        Additionally, my strong foundation in Object-Oriented Programming and proven problem-solving skills enable me to deliver high-quality, 
+                        user-centric solutions tailored to meet client requirements.</p>
+                </div>
+            
+
+                <div class="resume-body">
+                    <div class="tab-buttons">
+                        <button onclick="showTab('experience')" class="tab-button active">Experience</button>
+                        <button onclick="showTab('education')" class="tab-button">Education</button>   
+                        <button onclick="showTab('skills')" class="tab-button">Skills</button>   
+                        <button onclick="showTab('about')" class="tab-button">About</button>        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="resume-layout2">
+                <div class="tab-content">
+                   
+                    <div id="experience" class="tab-pane active">
+                        <div class="card">
+                            <h2>
+                                <span style="color: white">My</span>
+                                <span style="color: #39FF14">Experience</span>
+                            </h2>
+                        </div>
+                    </div>
+                    
+                    <div id="education" class="tab-pane">
+                        <div class="card">
+                            <h2>
+                                <span style="color: white">My</span>
+                                <span style="color: #39FF14">Education</span>
+                            </h2>
+                        </div>
+                        <div class="education-card">
+                            <h3>2023 - 2025</h3>
+                            <h1>Bachelor of Software Engineeing</h1>
+                        </div>
+                    </div>
+                    
+                    <div id="skills" class="tab-pane">
+                        <div class="card">
+                            <h2>
+                                <span style="color: white">My</span>
+                                <span style="color: #39FF14">Skills</span>
+                            </h2>
+                        </div>
+                    </div>
+                   
+                    <div id="about" class="tab-pane">
+                        <div class="card">
+                            <h2>
+                                <span style="color: white">About</span>
+                                <span style="color: #39FF14">Me</span>
+                            </h2>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+         
+        </section>
+
+
+    </body>
+</html>

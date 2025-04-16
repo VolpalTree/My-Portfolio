@@ -113,7 +113,8 @@ h3 {
 }
 .btn1:hover {
     background-color: #2f393d;
-    border: 2px solid #39FF14;;
+    color: white;
+    border: 2px solid #39FF14;
 }
 
 .btn2 {
@@ -123,13 +124,13 @@ h3 {
    width: 40px;
    height: 40px;
    border-radius: 50%;
-   background-color: black;
+   background-color: #2f393d;
    border: 2px solid #2ea44f;
    padding: 0;
    overflow: hidden;
    text-decoration: none;
    transition: all 0.2s ease;
-   background-image: url('images/png-clipart-computer-icons-github-symbol-github-white-face-556517588.png');
+   background-image: url('images/github-svgrepo-com(1).svg');
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -152,14 +153,14 @@ h3 {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: black;
+    background-color: #2f393d;
     border: 2px solid #2ea44f;
     padding-left: 10px;
     overflow: hidden;
     text-decoration: none;
     transition: all 0.2s ease;
-    background-image: url('images/hd-green-linkedin-in-icon-text-symbol-sign-png-31623974088hhsnjo9cix-3261247365.png');
-    background-size: 100%;
+    background-image: url('images/linkedin-svgrepo-com.svg');
+    background-size: 65%;
     background-position: center;
     background-repeat: no-repeat;
     margin-left: 15px;
