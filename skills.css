@@ -1,0 +1,38 @@
+.skills-title {
+    text-align: center;
+    margin-top: 18 0px;
+}
+h1 {
+    color: #39FF14;
+    font-size: 60px;
+    font-weight: 1500;
+}
+.front-end {
+    color: white;
+    background-color: rgb(78, 75, 75);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    gap: 10px;
+}
+.card-icon img {
+    width: 55px;
+}
+.card-content h2 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+.card-content p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.front-end:hover {
+    background-color: darkgrey;
+    
+}
