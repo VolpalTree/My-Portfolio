@@ -102,6 +102,10 @@ h3 {
     flex-wrap: wrap;
     padding: 10px 20px;
 }
+.main-buttons a{
+    text-decoration: none;
+    color: black;
+}
 
 .btn1 {
     background-color: #39FF14;
