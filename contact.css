@@ -1,0 +1,32 @@
+.contact-body {
+    color: white;
+    margin-left: 100px;
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;     /* center vertically */
+    height: 100vh;           /* take full viewport height */
+    text-align: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+h1 {
+    font-size: 100px;
+    color: #39FF14;
+}
+
+
+
+p {
+    font-size: 20px;
+}
+
+.right-content {
+    display: flex;
+    margin-top: 50px;
+    gap: 100px;
+}
+
+svg {
+    fill: darkgoldenrod;
+}

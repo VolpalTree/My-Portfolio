@@ -23,7 +23,7 @@
     justify-content: space-between;
     align-items: flex-start;
     margin-top: 40px;
-    /gap: 20px;
+    gap: 20px;
 } 
 .resume-heroes {
     display: flex;
@@ -108,3 +108,74 @@
     line-height: 60px; /* vertically center if needed */
     margin: 0; /
 }
+
+.project-card {
+    width: 100%;
+    max-width: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: stretch; /* Ensures items align to the left */
+    width: 100%;
+    gap: 30px;
+}
+
+.project1,
+.project2,
+.project3 {
+    display: block;
+    width: 100%;              /* Full width of parent */
+    max-width: none;          /* No limit */
+    background-color: #3a3a3a; /* Your existing background color */
+    padding: 20px;            /* Optional: spacing inside */
+    box-sizing: border-box; /* Pull it all the way to the right */
+    margin-top: 50px;
+}
+
+.education-card {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    color: white;
+    background-color: #3a3a3a;
+    border: 2px solid #39FF14;
+    border-radius: 10px;
+    margin-top: 50px;
+    gap: 10px;
+}
+.education-card h3 {
+    margin-left: 10px;
+    margin-bottom: 0;
+}
+.education-card p {
+    margin-left: 10px;
+    margin-top: 2px;
+    margin-bottom: 0;
+}
+.education-card h1 {
+    margin-left: 10px;
+    margin-top: 3px;
+}
+.skills-content {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;  
+}
+
+svg {
+    background-color: #3a3a3a;
+    padding: 30px;
+    width: 150px;
+    height: 150px;
+}
+
+.skills-content svg:hover path {
+    fill: #39FF14;
+
+}
+
+.skills-content path {
+    transition: fill 0.3s ease;
+}
+
+
