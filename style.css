@@ -181,132 +181,13 @@ h3 {
     padding-right: 150px;
     margin-top: 200px;
 }  
-.orbit-wrapper {
-    position: relative;
+.profile-image {
     width: 400px;
     height: 400px;
-}
-
-.profile-image {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
     border-radius: 50%;  
-    display: block; 
-}
-
-.orbit {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 20px;
-    height: 20px;
-    transform: translate(-50%, -50%);
-    transform-origin: 50% 50%;
-}
-
-.orb-core {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 12px;
-    height: 12px;
-    background: radial-gradient(circle, #39FF14, #00bf63);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 
-        0 0 15px rgba(57, 255, 20, 0.8),
-        0 0 30px rgba(57, 255, 20, 0.5),
-        0 0 60px rgba(57, 255, 20, 0.3);
-    filter: blur(0.5px);
-}
-
-.orb-tail {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 60px;
-    height: 4px;
-    background: linear-gradient(90deg, 
-        rgba(57, 255, 20, 0.8) 0%, 
-        rgba(57, 255, 20, 0.6) 30%, 
-        rgba(57, 255, 20, 0.4) 60%, 
-        rgba(57, 255, 20, 0.2) 80%, 
-        transparent 100%);
-    border-radius: 2px;
-    transform: translate(-50%, -50%) rotate(0deg);
-    transform-origin: 0% 50%;
-    filter: blur(1px);
-}
-
-.orbit1 {
-    animation: rotate1 8s linear infinite;
-}
-
-.orbit2 {
-    animation: rotate2 6s linear infinite reverse;
-}
-
-.orbit1 .orb-core {
-    background: radial-gradient(circle, #39FF14, #00bf63);
-}
-
-.orbit2 .orb-core {
-    background: radial-gradient(circle, #00bf63, #39FF14);
-}
-
-.orbit1 .orb-tail {
-    background: linear-gradient(90deg, 
-        rgba(57, 255, 20, 0.8) 0%, 
-        rgba(57, 255, 20, 0.6) 30%, 
-        rgba(57, 255, 20, 0.4) 60%, 
-        rgba(57, 255, 20, 0.2) 80%, 
-        transparent 100%);
-}
-
-.orbit2 .orb-tail {
-    background: linear-gradient(90deg, 
-        rgba(0, 191, 99, 0.8) 0%, 
-        rgba(0, 191, 99, 0.6) 30%, 
-        rgba(0, 191, 99, 0.4) 60%, 
-        rgba(0, 191, 99, 0.2) 80%, 
-        transparent 100%);
-}
-
-@keyframes rotate1 {
-    0% { 
-        transform: rotate(0deg) translateX(180px) rotate(0deg); 
-    }
-    100% { 
-        transform: rotate(360deg) translateX(180px) rotate(-360deg); 
-    }
-}
-  
-@keyframes rotate2 {
-    0% { 
-        transform: rotate(0deg) translateX(220px) rotate(0deg); 
-    }
-    100% { 
-        transform: rotate(360deg) translateX(220px) rotate(-360deg); 
-    }
-}
-
-/* Add pulsing effect to the orbs */
-.orb-core {
-    animation: pulse 2s ease-in-out infinite alternate;
-}
-
-@keyframes pulse {
-    0% {
-        box-shadow: 
-            0 0 15px rgba(57, 255, 20, 0.8),
-            0 0 30px rgba(57, 255, 20, 0.5),
-            0 0 60px rgba(57, 255, 20, 0.3);
-    }
-    100% {
-        box-shadow: 
-            0 0 20px rgba(57, 255, 20, 0.9),
-            0 0 40px rgba(57, 255, 20, 0.6),
-            0 0 80px rgba(57, 255, 20, 0.4);
-    }
+    display: block;
+    border: none;
+    outline: none;
+    box-shadow: none;
 }

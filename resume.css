@@ -112,23 +112,229 @@
 .project-card {
     width: 100%;
     max-width: none;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: stretch; /* Ensures items align to the left */
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 30px;
+    padding: 20px;
+    margin-top: 20px;
 }
 
 .project1,
 .project2,
 .project3 {
-    display: block;
-    width: 100%;              /* Full width of parent */
-    max-width: none;          /* No limit */
-    background-color: #3a3a3a; /* Your existing background color */
-    padding: 20px;            /* Optional: spacing inside */
-    box-sizing: border-box; /* Pull it all the way to the right */
-    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;              /* Full width to extend to navbar */
+    max-width: 600px;         /* Maximum width to match navbar area */
+    height: 80px;             /* Collapsed height showing only title */
+    background-color: #3a3a3a;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 0;            /* Remove top margin since we're using flex gap */
+    border-radius: 12px;
+    border: 2px solid transparent;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Default state - show only title */
+.project1 p,
+.project2 p,
+.project3 p {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Hover state - expand card and show full content */
+.project1:hover,
+.project2:hover,
+.project3:hover {
+    height: 200px;            /* Expanded height */
+    transform: translateY(-8px);
+    background-color: #4a4a4a;
+    border-color: #39FF14;
+    box-shadow: 
+        0 10px 25px rgba(57, 255, 20, 0.3),
+        0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 10;              /* Bring hovered card to front */
+}
+
+/* Show paragraph content on hover */
+.project1:hover p,
+.project2:hover p,
+.project3:hover p {
+    opacity: 1;
+    max-height: 120px;        /* Allow content to show */
+    margin-top: 15px;
+}
+
+/* Individual card hover states - simplified to prevent jiggling */
+.project1:hover,
+.project2:hover,
+.project3:hover {
+    height: auto;             /* Auto height to accommodate all content */
+    min-height: 450px;        /* Minimum height to ensure proper display */
+    transform: translateY(-8px);
+    background-color: #4a4a4a;
+    border-color: #39FF14;
+    box-shadow: 
+        0 10px 25px rgba(57, 255, 20, 0.3),
+        0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 10;              /* Bring hovered card to front */
+}
+
+/* Show paragraph content on hover */
+.project1:hover p,
+.project2:hover p,
+.project3:hover p {
+    opacity: 1;
+    max-height: none;         /* Allow full paragraph content */
+    margin-top: 15px;
+    overflow: visible;         /* Ensure content is fully visible */
+}
+
+/* Tech stacks styling */
+.tech-stacks {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-top: 0;
+}
+
+.tech-section {
+    margin-bottom: 15px;
+}
+
+.tech-section h3 {
+    color: #39FF14;
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.tech-section ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.tech-section li {
+    color: #ffffff;
+    font-size: 14px;
+    margin-bottom: 4px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.tech-section li::before {
+    content: "•";
+    color: #39FF14;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Show tech stacks on hover */
+.project1:hover .tech-stacks,
+.project2:hover .tech-stacks,
+.project3:hover .tech-stacks {
+    opacity: 1;
+    max-height: none;
+    margin-top: 15px;
+    overflow: visible;
+}
+
+/* Project link styling */
+.project-link {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-top: 0;
+}
+
+.project-link a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #39FF14;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 16px;
+    border: 2px solid #39FF14;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    background-color: rgba(57, 255, 20, 0.1);
+}
+
+.project-link a:hover {
+    background-color: #39FF14;
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(57, 255, 20, 0.3);
+}
+
+.project-link span {
+    font-size: 16px;
+}
+
+/* Show project link on hover */
+.project1:hover .project-link,
+.project2:hover .project-link,
+.project3:hover .project-link {
+    opacity: 1;
+    max-height: 50px;
+    margin-top: 15px;
+    overflow: visible;
+}
+
+
+
+/* Add a subtle glow effect on hover */
+.project1::before,
+.project2::before,
+.project3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent, rgba(57, 255, 20, 0.05), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.project1:hover::before,
+.project2:hover::before,
+.project3:hover::before {
+    opacity: 1;
+}
+
+/* Enhanced text effects on hover */
+.project1:hover h2,
+.project2:hover h2,
+.project3:hover h2 {
+    color: #39FF14;
+    transition: color 0.3s ease;
+}
+
+/* Add a subtle pulse animation for active state */
+.project1:active,
+.project2:active,
+.project3:active {
+    transform: translateY(-4px);
+    transition: all 0.1s ease;
 }
 
 .education-card {
@@ -158,7 +364,7 @@
 .skills-content {
     margin-top: 60px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 30px;  
     animation: fadeInUp 0.8s ease-out;
 }
@@ -195,6 +401,8 @@ svg {
 .skills-content svg:nth-child(6) { animation: slideInSkill 0.6s ease-out 0.6s both; }
 .skills-content svg:nth-child(7) { animation: slideInSkill 0.6s ease-out 0.7s both; }
 .skills-content svg:nth-child(8) { animation: slideInSkill 0.6s ease-out 0.8s both; }
+.skills-content svg:nth-child(9) { animation: slideInSkill 0.6s ease-out 0.9s both; }
+.skills-content svg:nth-child(10) { animation: slideInSkill 0.6s ease-out 1.0s both; }
 
 @keyframes slideInSkill {
     from {
